@@ -1,0 +1,54 @@
+{
+	"pages": [	
+		{
+			"path": "pages/index/index",
+			"style": {
+                "navigationBarTitleText": "职霸"
+			}
+		},
+        {
+        	"path": "pages/feedback/feedback",
+        	"style": {
+                "navigationBarTitleText": "问题反馈"
+        	}
+        }
+        ,{
+            "path" : "pages/more/more",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/agreement/agreement",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用户服务协议",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/agreement/agreement",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用户隐私协议",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"mp-alipay": {
+			/* 支付宝小程序特有相关 */
+			"transparentTitle": "always",
+			"allowsBounceVertical": "NO"
+		},
+		"navigationBarBackgroundColor": "#ea6306",
+		"navigationBarTitleText": "卡友小蜜",
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "white"
+	}
+}
