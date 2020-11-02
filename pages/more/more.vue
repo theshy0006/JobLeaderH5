@@ -20,45 +20,8 @@
 		</view>
         
         <view class="job">
-            <view style="padding-left:32rpx; color: #333333; font-size: 28rpx;">求职</view>
             <view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
             	<view class="cu-item bigItem" v-for="(item,index) in jobItems" :key="index">
-            		<view class='addItem'>
-                        <image style="width:64rpx; height: 64rpx;":src=item.imageUrl></image>
-                        <image class="rightCorner":src=addUrl></image>
-            		</view>
-            		<text>{{item.name}}</text>
-            	</view>
-            </view>
-        </view>
-        <view class="invite">
-                        <view style="padding-left:32rpx; color: #333333; font-size: 28rpx;">招聘</view>
-            <view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
-            	<view class="cu-item bigItem" v-for="(item,index) in inviteItems" :key="index">
-            		<view class='addItem'>
-                        <image style="width:64rpx; height: 64rpx;":src=item.imageUrl></image>
-                        <image class="rightCorner":src=addUrl></image>
-            		</view>
-            		<text>{{item.name}}</text>
-            	</view>
-            </view>
-        </view>
-        <view class="assess">
-            <view style="padding-left:32rpx; color: #333333; font-size: 28rpx;">评估</view>
-            <view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
-            	<view class="cu-item bigItem" v-for="(item,index) in assessItems" :key="index">
-            		<view class='addItem'>
-                        <image style="width:64rpx; height: 64rpx;":src=item.imageUrl></image>
-                        <image class="rightCorner":src=addUrl></image>
-            		</view>
-            		<text>{{item.name}}</text>
-            	</view>
-            </view>
-        </view>
-        <view class="recommend">
-            <view style="padding-left:32rpx; color: #333333; font-size: 28rpx;">推荐</view>
-            <view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
-            	<view class="cu-item bigItem" v-for="(item,index) in recommendItems" :key="index">
             		<view class='addItem'>
                         <image style="width:64rpx; height: 64rpx;":src=item.imageUrl></image>
                         <image class="rightCorner":src=addUrl></image>
@@ -122,9 +85,7 @@
                     {
                     	imageUrl: '../../static/icon_paihangbang.png',
                     	name: '排行榜'
-                    }
-                ],
-                inviteItems: [
+                    },
                     {
                     	imageUrl: '../../static/icon_rencaiguangchang.png',
                     	name: '人才广场'
@@ -156,9 +117,7 @@
                     {
                     	imageUrl: '../../static/icon_zhaopingshuju.png',
                     	name: '招聘数据'
-                    }
-                ],
-                assessItems: [
+                    },
                     {
                     	imageUrl: '../../static/icon_pingguyixiang.png',
                     	name: '评估意向'
@@ -174,9 +133,7 @@
                     {
                     	imageUrl: '../../static/icon_pinggushuju.png',
                     	name: '评估数据'
-                    }
-                ],
-                recommendItems: [
+                    },
                     {
                     	imageUrl: '../../static/icon_yaotuijian.png',
                     	name: '我要推荐'
