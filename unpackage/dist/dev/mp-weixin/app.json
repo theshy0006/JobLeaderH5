@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/feedback/feedback",
+    "pages/more/more",
+    "pages/agreement/agreement",
+    "pages/agreement/agreement",
+    "pages/editColumn/editColumn"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarBackgroundColor": "#ea6306",
+    "navigationBarTitleText": "卡友小蜜",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  }
+}

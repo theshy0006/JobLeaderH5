@@ -7,6 +7,9 @@ Vue.prototype.$store = store
 import global_ from './common/request.js'
 Vue.prototype.GLOBAL = global_;
 
+import Bridge from './common/JSbridge.js'
+Vue.prototype.$bridge = Bridge
+
 import cuCustom from './colorui/components/cu-custom.vue'
 Vue.component('cu-custom',cuCustom)
 

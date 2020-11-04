@@ -16,7 +16,7 @@
             "path" : "pages/more/more",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "更多",
                 "enablePullDownRefresh": false
             }
             
@@ -31,7 +31,7 @@
             
         }
         ,{
-            "path" : "pages/agreement/agreement",
+            "path" : "pages/agreement/private",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "用户隐私协议",
@@ -40,16 +40,25 @@
             
         }
         ,{
-            "path" : "pages/addModule/addModule",
+            "path" : "pages/editColumn/editColumn",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "栏目编辑",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/editColumn/editColumn",
+            "path" : "pages/city/city",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "选择城市",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/addModule/addModule",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

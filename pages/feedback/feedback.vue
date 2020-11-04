@@ -209,13 +209,6 @@
                     })
                     return
                 }
-                if (this.imgList.length == 0) {
-                    uni.showToast({
-                        title:"请上传图片",
-                        icon:'none'
-                    })
-                    return
-                }
                 var url = [];
                 url = url.concat(this.urlArray)
                 while(url.length < 3) {

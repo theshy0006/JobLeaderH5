@@ -3,9 +3,11 @@
 		<view class="top">
 			<text style="text-align: center; font-size: 28rpx; color:#333333;">你可以将需要的栏目添加到首页</text>
 		    <view class="cu-list grid topCenter" :class="['col-' + currentCol,gridBorder?'':'no-border']">
-		    	<view class="cu-item bigItem" v-for="(item,index) in checkItems" :key="index">
-		    		<view class='columnItem'>{{item.name}}</view>
-                    <image class="rightCorner":src=cancelUrl></image>
+		    	<view class="cu-item bigItem" v-for="(item,index) in checkItems" :key="index" @click="cancelItem(item)">
+                    <view class="addItem">
+                        <view class='columnItem'>{{item}}</view>
+                        <image class="rightCorner":src=cancelUrl></image>
+                    </view>
 		    	</view>
 		    </view>
 		    <view class="topBottom">
@@ -16,16 +18,18 @@
             
             <view class="uncheck">
                 <view class="cu-list grid topCenter" :class="['col-' + currentCol,gridBorder?'':'no-border']">
-                	<view class="cu-item bigItem" v-for="(item,index) in unCheckItems" :key="index">
-                		<view class='uncheckItem'>{{item.name}}</view>
-                        <image class="rightCorner":src=addUrl></image>
+                	<view class="cu-item bigItem" v-for="(item,index) in unCheckItems" :key="index" @click="addItem(item)">
+                        <view class="addItem">
+                            <view class='uncheckItem'>{{item}}</view>
+                            <image class="rightCorner":src=addUrl></image>
+                        </view>
                 	</view>
                 </view>
             </view>
 		 
 		</view>
         <view class="bottom padding">
-            <button class="cu-btn block bg-blue margin-tb-sm lg">保存</button>
+            <button class="cu-btn block bg-blue margin-tb-sm lg" @click="save">保存</button>
         </view>
 
 	</view>
@@ -33,35 +37,76 @@
 
 <script>
 	export default {
+        onLoad() {
+            var params = this.getHashParameters();
+            for (var key in params) {
+                var item = params[key];
+                this.checkItems.push(item);
+                this.unCheckItems.splice(this.unCheckItems.indexOf(item),1);
+            }
+        },
 		data() {
 			return {
                 addUrl: '../../static/icon_service_add.png',
                 cancelUrl: '../../static/icon_service_delete.png',
 				checkItems:[
-				    {
-						name: '求职列表'
-					},
-				    {
-				    	name: '招聘资讯'
-				    },
+
 				],
                 unCheckItems:[
-                    {
-                    	name: '评估资讯'
-                    },
-                    {
-                    	name: '人才列表'
-                    },
-                    {
-                    	name: '求职资讯'
-                    }
+                    '求职列表',
+                    '招聘资讯',
+                    '评估资讯',
+                    '人才列表',
+                    '求职资讯'
                 ],
                 currentCol:3,
                 gridBorder: false,
 			}
 		},
 		methods: {
-			
+            getHashParameters() {
+                var arr = (location.hash || '').split('?')[1].split('&')
+                var params = {}
+                for (var i = 0; i < arr.length; i++) {
+                    var data = arr[i].split('=')
+                    if (data.length === 2) {
+                        params[data[0]] = decodeURI(data[1])
+                    }
+                }
+                return params
+            },
+            
+			cancelItem(item) {
+                this.unCheckItems.push(item);
+                this.checkItems.splice(this.checkItems.indexOf(item),1);
+            },
+            addItem(item) {
+                this.checkItems.push(item);
+                this.unCheckItems.splice(this.unCheckItems.indexOf(item),1);
+            },
+            save() {
+                
+                if(this.checkItems.length < 2) {
+                    uni.showToast({
+                        title:"至少要保留两个栏目",
+                        icon:'none'
+                    })
+                    return
+                }
+
+                var checked = ""
+                for (var i = 0; i < this.checkItems.length; i++) {
+                    if(i == 0) {
+                        checked = this.checkItems[i].name;
+                    } else {
+                        checked = checked + "+" + this.checkItems[i].name;
+                    }
+                }
+                console.log(checked);
+                this.$bridge.callHandler('saveItem',checked,res=>{
+                    console.log(res);
+                });
+            }
 		}
 	}
 </script>
@@ -91,7 +136,7 @@
 }
 
 .topBottom {
-    margin-top: 70rpx;
+    margin-top: 40rpx;
     display: flex;
     display: -webkit-flex; /* Safari */
     flex-direction: row;
@@ -136,7 +181,8 @@
     display: flex;
     flex-direction: column;
     font-size: 28rpx;
-
+    height: 70rpx;
+    
 }
 
 .columnItem {
@@ -161,6 +207,7 @@
     width: 32rpx;
     height: 32rpx;
     margin-top: -92rpx;
+    margin-right: -14rpx;
 }
 
 .uncheck {

@@ -1,0 +1,120 @@
+
+.all {
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    height: 100vh;
+}
+.bottom {
+}
+.top {
+    background-color: #FFFFFF;
+    width: 750rpx;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    padding-top: 40rpx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+}
+.topBottom {
+    margin-top: 70rpx;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+            justify-content:center;
+}
+.job {
+    padding-top: 20rpx;
+}
+.rightButton {
+    background-color: #0198F8;
+    font-size: 24rpx;
+    color: #FFFFFF;
+    padding-left: 28rpx;
+    padding-right: 28rpx;
+    margin-right: 32rpx;
+}
+.topCenter {
+    margin-top: 20rpx;
+}
+.unselected {
+    padding-bottom: 20rpx;
+}
+.rightCorner {
+    width: 32rpx;
+    height: 32rpx;
+    margin-top: -50rpx;
+    margin-left: 170rpx;
+}
+.bigItem {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: right;
+    -webkit-justify-content: right;
+            justify-content: right;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.addItem {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    font-size: 28rpx;
+    height: 70rpx;
+}
+.columnItem {
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+    padding-top: 14rpx;
+    padding-bottom: 14rpx;
+    color: #0198F8;
+    background-color: #c2e4fe;
+}
+.uncheckItem {
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+    padding-top: 14rpx;
+    padding-bottom: 14rpx;
+    color: #999999;
+    background-color: #f2f2f2;
+}
+.rightCorner {
+    width: 32rpx;
+    height: 32rpx;
+    margin-top: -92rpx;
+    margin-right: -14rpx;
+}
+.uncheck {
+}
+
+
