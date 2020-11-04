@@ -4492,7 +4492,7 @@
         background-color: #E7F3FF;
         font-size: 24rpx;
         color: #3AA7FF;
-        margin-left: 10rpx;
+        margin-left: 5rpx;
         margin-right: 10rpx;
         width: 160rpx;
         height: 64rpx;

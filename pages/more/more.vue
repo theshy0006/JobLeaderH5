@@ -44,10 +44,11 @@
             for (var key in params) {
                 var item = params[key];
                 
-                for (var i = 0; i < this.allItems.length; i++) {
-                    if (item == this.allItems[i].name) {
-                        this.checkItems.push(this.allItems[i]);
-                        this.unCheckItems.splice(this.unCheckItems.indexOf(this.allItems[i]),1);
+                for (var i = 0; i < this.unCheckItems.length; i++) {
+                    if (item == this.unCheckItems[i].name) {
+                        this.checkItems.push(this.unCheckItems[i]);
+                        this.unCheckItems.splice(this.unCheckItems.indexOf(this.unCheckItems[i]),1);
+                        break;
                     }
                 }
             }
@@ -57,114 +58,8 @@
                 addUrl: '../../static/icon_service_add.png',
                 cancelUrl: '../../static/icon_service_delete.png',
 				checkItems:[
-                    
                 ],
-                allItems:[
-                    {
-                    	imageUrl: '../../static/icon_shortcut_positon.png',
-                    	name: '职位广场'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_job_resumeeditor.png',
-                    	name: '简历中心'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_job_data.png',
-                    	name: '求职意向'
-                    },
-                    {
-                		imageUrl: '../../static/icon_job_data.png',
-                		name: '校招'
-                	},
-                    {
-                    	imageUrl: '../../static/icon_shezhao.png',
-                    	name: '社招'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_shixi.png',
-                    	name: '实习'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_toudi.png',
-                    	name: '投递记录'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_gongsiku.png',
-                    	name: '公司库'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_shoucang.png',
-                    	name: '收藏中心'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_mubanku.png',
-                    	name: '模板库'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_paihangbang.png',
-                    	name: '排行榜'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_rencaiguangchang.png',
-                    	name: '人才广场'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_zhiweiguanli.png',
-                    	name: '职位管理'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_jianliku.png',
-                    	name: '简历库'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_jianlichuli.png',
-                    	name: '简历处理'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_gszhuye.png',
-                    	name: '公司主页'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_rencaishoucang.png',
-                    	name: '人才收藏'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_yaoqingtongshi.png',
-                    	name: '邀请同事'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_zhaopingshuju.png',
-                    	name: '招聘数据'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_pingguyixiang.png',
-                    	name: '评估意向'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_pinggutiku.png',
-                    	name: '评估题库'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_pinggujilu.png',
-                    	name: '评估记录'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_pinggushuju.png',
-                    	name: '评估数据'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_yaotuijian.png',
-                    	name: '我要推荐'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_tuijianjilu.png',
-                    	name: '推荐记录'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_mine_helper.png',
-                    	name: '推荐数据'
-                    }
-                ],
+                
                 unCheckItems:[
                     {
                     	imageUrl: '../../static/icon_shortcut_positon.png',

@@ -7,7 +7,7 @@
         <view class="selected">
             <view class="moduleItem bg-white shadow" v-for="(item,index) in selectItems" :key="index" @click="cancelItem(item)">
                 <view class="leftView">
-                    <image :src=item.imageUrl class="itemImage"> </image>
+                    <image :src=item.imageUrl class="itemImage" mode="aspectFit"> </image>
                     <text class="itemContent">{{item.name}}</text>
                 </view>
                 <view class="rightView">
@@ -33,7 +33,7 @@
                 </view>
                 <view class="rightView">
                     <view>
-                        <image class="tagImage"> </image>
+                        <image :src=untagImage class="tagImage"> </image>
                     </view>
                     
                     <view class="info">{{alertContent}}</view>
@@ -49,6 +49,7 @@
 		data() {
 			return {
                 type:0,
+                untagImage: '../../static/icon_choice_gray.png',
                 tagImage: '../../static/icon_choice_blue.png',
                 alertContent:'将助您更好地了解我们，轻松申请职位。因此，我们希望您能浏览本页，更多地了解',
 				selectItems:[
@@ -159,12 +160,18 @@
             for (var key in params) {
                 var item = params[key];
                 
-                for (var i = 0; i < this.allItems.length; i++) {
-                    if (item == this.allItems[i].name) {
-                        this.selectItems.push(this.allItems[i]);
-                        this.unSelectItems.splice(this.unSelectItems.indexOf(this.allItems[i]),1);
+                for (var i = 0; i < this.unSelectItems.length; i++) {
+                    if (item == this.unSelectItems[i].name) {
+                        var obj = this.unSelectItems[i];
+                        this.selectItems.push(obj);
+                        this.unSelectItems.splice(this.unSelectItems.indexOf(obj),1);
+                        
                     }
                 }
+                
+                
+                
+                
             }
         },
 	}
@@ -205,7 +212,7 @@
     margin-top: 40rpx;
 }
 .unselected {
-
+    background-color: #FFFFFF;
 }
 
 .leftView {
@@ -246,6 +253,8 @@
 
 .info{
     margin-right: 10rpx;
+    margin-top: -10px;
+    padding-bottom: 5px;
     overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -258,6 +267,7 @@
     font-size: 20rpx;
     color: #3AA7FF;
     margin-right: 30rpx;
+    margin-bottom: 10rpx;
 }
 </style>
 
