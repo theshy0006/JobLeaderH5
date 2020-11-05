@@ -13,7 +13,7 @@
             </view>
             <view class="topBottom">
                 <view style="background-color: #ECECEC; width: 124rpx; height: 2rpx;"></view>
-                <view style="padding-left: 20rpx;padding-right: 20rpx; font-size: 20rpx; color: #999999;">以上服务展示在首页(最多三项)</view>
+                <view style="padding-left: 20rpx;padding-right: 20rpx; font-size: 20rpx; color: #999999;">以上服务展示在首页(展示三项)</view>
                 <view style="background-color: #ECECEC; width: 124rpx; height: 2rpx;"></view>
             </view>
          
@@ -62,10 +62,6 @@
                 
                 unCheckItems:[
                     {
-                    	imageUrl: '../../static/icon_shortcut_positon.png',
-                    	name: '职位广场'
-                    },
-                    {
                     	imageUrl: '../../static/icon_job_resumeeditor.png',
                     	name: '简历中心'
                     },
@@ -74,7 +70,7 @@
                     	name: '求职意向'
                     },
                     {
-                		imageUrl: '../../static/icon_job_data.png',
+                		imageUrl: '../../static/icon_xiaozhao.png',
                 		name: '校招'
                 	},
                     {
@@ -104,10 +100,6 @@
                     {
                     	imageUrl: '../../static/icon_paihangbang.png',
                     	name: '排行榜'
-                    },
-                    {
-                    	imageUrl: '../../static/icon_rencaiguangchang.png',
-                    	name: '人才广场'
                     },
                     {
                     	imageUrl: '../../static/icon_zhiweiguanli.png',
@@ -195,8 +187,7 @@
                     this.unCheckItems.push(b);
                 }
 			},
-            save() {
-                
+            save() {   
                 if(this.checkItems.length != 3) {
                     uni.showToast({
                         title:"首页必须保留三个项",
@@ -211,9 +202,7 @@
                     } else {
                         checked = checked + "+" + this.checkItems[i].name;
                     }
-                    
                 }
-
                 console.log(checked)
                 this.$bridge.callHandler('saveService',checked,res=>{
                                     console.log(res);

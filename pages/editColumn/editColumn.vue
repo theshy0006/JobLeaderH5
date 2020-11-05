@@ -97,9 +97,9 @@
                 var checked = ""
                 for (var i = 0; i < this.checkItems.length; i++) {
                     if(i == 0) {
-                        checked = this.checkItems[i].name;
+                        checked = this.checkItems[i];
                     } else {
-                        checked = checked + "+" + this.checkItems[i].name;
+                        checked = checked + "+" + this.checkItems[i];
                     }
                 }
                 console.log(checked);

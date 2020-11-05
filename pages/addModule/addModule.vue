@@ -150,7 +150,7 @@
 			    }
 			
 			    console.log(checked)
-			    this.$bridge.callHandler('saveService',checked,res=>{
+			    this.$bridge.callHandler('saveworkspace',checked,res=>{
 			                        console.log(res);
 			                    });
 			}
