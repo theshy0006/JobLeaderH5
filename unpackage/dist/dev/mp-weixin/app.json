@@ -1,20 +1,30 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/feedback/feedback",
-    "pages/more/more",
-    "pages/agreement/agreement",
-    "pages/agreement/agreement",
-    "pages/editColumn/editColumn"
+    "pages/launchPage/launchPage",
+    "pages/launchPage/loginPage",
+    "pages/index/workIndex",
+    "pages/index/EventItem",
+    "pages/upload/upload",
+    "pages/detail/detail",
+    "pages/upload/uploadReform",
+    "pages/upload/uploadReview",
+    "pages/map/map"
   ],
   "subPackages": [],
   "window": {
     "navigationBarBackgroundColor": "#ea6306",
-    "navigationBarTitleText": "卡友小蜜",
+    "navigationBarTitleText": "科技环卫",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要访问定位权限来获取当前位置信息"
+    }
+  },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  }
+  },
+  "sitemapLocation": "sitemap54.json"
 }

@@ -9,27 +9,40 @@ const store = new Vuex.Store({
 		phone: "",
         name: "",
         balanceBonus: "",
-        totalBonus: ""
+        totalBonus: "",
+        id: 0,
+        type: "",
 	},
 	mutations: {
 		login(state, token) {
 			state.token = token;
 		},
         
+        id(state, id) {
+            state.id = id;
+        },
+        
+        type(state, type) {
+            state.type = type;
+        },
+
 		logout(state) {
 			state.phone = "";
 			state.token = "";
             state.name = "";
             state.balanceBonus = "";
             state.totalBonus = "";
+            state.id = 0;
+            state.type = "";
 		},
-        userInfo(state, phone, username, balanceBonus, totalBonus) {
+        userInfo(state, phone, username, balanceBonus, totalBonus, id, type) {
             state.phone = phone;
             state.username = username;
             state.balanceBonus = balanceBonus;
             state.totalBonus = totalBonus;
+            state.id = id;
+            state.type = type;
         },
-        
         setPhone(state, phone) {
             state.phone = phone
         },
@@ -42,9 +55,12 @@ const store = new Vuex.Store({
         setTotalBonus(state, totalBonus) {
             state.totalBonus = totalBonus
         },
-        
-        
-        
+        setId(state, id) {
+            state.id = id
+        },
+        setType(state, type) {
+            state.type = type
+        },
 	}
 })
 

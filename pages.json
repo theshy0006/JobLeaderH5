@@ -3,62 +3,84 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-                "navigationBarTitleText": "职霸"
+                "navigationBarTitleText": "科技环卫"
 			}
 		},
         {
-        	"path": "pages/feedback/feedback",
+        	"path": "pages/launchPage/launchPage",
         	"style": {
-                "navigationBarTitleText": "问题反馈"
+        	}
+        },
+        {
+        	"path": "pages/launchPage/loginPage",
+        	"style": {
         	}
         }
         ,{
-            "path" : "pages/more/more",
+            "path" : "pages/index/workIndex",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "更多",
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/EventItem",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/agreement/agreement",
+            "path" : "pages/upload/upload",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "用户服务协议",
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/agreement/private",
+            "path" : "pages/detail/detail",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "用户隐私协议",
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/editColumn/editColumn",
+            "path" : "pages/upload/uploadReform",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "栏目编辑",
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/city/city",
+            "path" : "pages/upload/uploadReview",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "选择城市",
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/addModule/addModule",
+            "path" : "pages/map/map",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/benefits/benefits",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -74,7 +96,7 @@
 			"allowsBounceVertical": "NO"
 		},
 		"navigationBarBackgroundColor": "#ea6306",
-		"navigationBarTitleText": "卡友小蜜",
+		"navigationBarTitleText": "科技环卫",
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "white"
 	}

@@ -1,6 +1,6 @@
 {
-    "name" : "JobLeaderH5",
-    "appid" : "__UNI__3591CB1",
+    "name" : "STWorker",
+    "appid" : "__UNI__9C089FD",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -44,9 +44,16 @@
     },
     "quickapp" : {},
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx37c46c08fb8e196b",
         "setting" : {
-            "urlCheck" : true
+            "urlCheck" : false,
+            "postcss" : true,
+            "minified" : true
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "需要访问定位权限来获取当前位置信息"
+            }
         }
     },
     "h5" : {

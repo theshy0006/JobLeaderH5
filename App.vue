@@ -107,6 +107,23 @@ export default {
 	},
 	onShow: function() {
 		console.log('App Show');
+		
+		const value = uni.getStorageSync('token');
+        const id = uni.getStorageSync('id');
+        const type = uni.getStorageSync('type');
+        
+		if (value) {
+			// 登录成功过
+			console.log(value);
+            this.$store.commit('login', value);
+            this.$store.commit('id', id);
+            this.$store.commit('type', type);
+            
+            
+		} else {
+			// 没有登录过
+			console.log('初次登陆');
+		}
 	},
 	onHide: function() {
 		console.log('App Hide');
